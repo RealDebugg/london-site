@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="sv">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<noscript><meta http-equiv="refresh" content="0; URL='noscript/noscript.html'"/></noscript>
+	<head>
+		<title>London tourist</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="//code.jquery.com/jquery.min.js"></script>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	</head>
+	<body>
+		<div id="page-loaded">
+			<div id="bg-page" class="section">
+			<div class="section-center">
+				<div class="container" style="margin-right: 0 !important;">
+					<div>
+						<!-- Formulär för att gå med -->
+						<div class="col-md-4">
+							<div class="race-for-luck" id="da-fuk">
+								<a class="material-icons WinClose" onclick="closeWinner()">clear</a>
+								<form id="race-form-lmao">
+									<div class="form-group">
+										<span class="form-label">Your Hotel</span>
+										<input class="form-control" id="hotel" type="text" placeholder="Enter a hotel name" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
+									</div>
+									<div class="form-group">
+										<span class="form-label">Your Name</span>
+										<input class="form-control name-control" id="name" type="text" placeholder="Enter your full name" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<span class="form-label">Check In</span>
+												<input class="form-control" id="check-in" type="date" required>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<span class="form-label">Check out</span>
+												<input class="form-control" id="check-out" type="date" required>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<span class="form-label">Adults</span>
+												<select class="form-control" id="adults">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+												<span class="select-arrow"></span>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="form-group">
+												<span class="form-label">Children</span>
+												<select class="form-control" id="child">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+												</select>
+												<span class="select-arrow"></span>
+											</div>
+										</div>
+									</div>
+									<div class="form-btn" id="form-btn">
+										<button class="submit-btn" type="submit" id="submit" >Send and Confirm</button>
+									</div>
+								</form>
+
+								<!-- SVG (Gömd Div, visas efter all info har submittats) -->
+								<div id="i-got-ur-personal-info-mate" class="thanks">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+  										<circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+  										<polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+									</svg>
+									<h1 style="text-align: center; color:#000;">Thanks!</h1>
+									<p style="text-align: center; color:#000;">Your information has been processed and we'll get back to you once we've confirmed your spot!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div id="bg-popup" class="section" style="display:none;">
+			<div class="section-center">
+				<div class="container" style="margin-right: auto !important;">
+					<div>
+						<!-- Popup -->
+						<div class="col-md-4" id="popup-css">
+							<div class="race-for-luck lucky-popup" id="da-fuk">
+								<a class="material-icons PopClose" onclick="closePopup()">clear</a>
+								<h2 id="popup-title" style="color: #000;"></h2>
+								<p id="popup-desc" style="color: #000;"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+
+			<div class="header" id="myHeader">
+			<div class="hContent">
+				<a href="#" class="hText">My Header</a> 
+			</div>
+			<div class="div-Cont">
+				<div class="hDivider" id="myDivider"></div>
+			</div>
+			<div class="nav-header-bg"></div>
+			</div>
+			<div class="content">
+			<img src="img/1.jpg" class="ImgTop"></img>
+			<h2 class="ImgH">Welcome to London</h2>
+			<a id="imgArr" href="#imgArr" class="material-icons ImgArr">keyboard_arrow_down</a>
+			</div>
+			<div class="content2" id="content" style="height:100000px;">
+			<!-- Start Interest List -->
+			<h2 class="attr-h1">Top Attractions in London</h2> <br>
+			<div class="transform-wrapper">
+				<ul>
+					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/warn-bro.jpg&quot;);" onclick="CallDOCInfo('Warner Bros. Studio Tour','Wizard')"></li>
+					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/lond-eye.jpg&quot;);" onclick="CallDOCInfo('London Eye','Wizard')"></li>
+					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/wind-castl.jpg&quot;);" onclick="CallDOCInfo('HI!3','Wizard')"></li>
+					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/sea-life.jpg&quot;);" onclick="CallDOCInfo('HI!4','Wizard')"></li>
+					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/twr-lnd.jpg&quot;);" onclick="CallDOCInfo('HI!5','Wizard')"></li>
+					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/mdm-tuss.jpg&quot;);" onclick="CallDOCInfo('HI!6','Wizard')"></li>
+					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/paul-cath.jpg&quot;);" onclick="CallDOCInfo('HI!7','Wizard')"></li>
+					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/wemb-stad.jpg&quot;);" onclick="CallDOCInfo('HI!8','Wizard')"></li>
+					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/west-abb.jpg&quot;);" onclick="CallDOCInfo('HI!9','Wizard')"></li>
+					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/lnd-trans-mus.jpg&quot;);" onclick="CallDOCInfo('HI!10','Wizard')"></li>
+				</ul>
+			</div>
+			<!-- End Interest List -->
+			</div>
+		</div>
+		<div id="browser-not-supported" style="display: none;">
+			<img class="status-page-image" src="img/error_browser.gif">
+			<h1 class="not-supported-page-title">Oh snap! We don't support this version of your browser, <em>and neither should you!</em></h1>
+			<p class="not-supported-intro">You are visiting this page because we detected an unsupported browser. Your browser does not support security features that we require. We highly recommend that you update your browser.</p>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html> 
