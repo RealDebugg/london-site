@@ -57,7 +57,7 @@ img { /*Stoppa användaren från att "dra" bilder ut ur hemsidan i en ny flik*/
 /* Vi använder "kodnamner" ImgX (där X är ett element för allting på den första bilden */
 .ImgH { /* Header Texten som ligger över den första div;en */
   font-family: "SF Pro Display-Bold", "Helvetica Neue", "Helvetica", "Arial", sans serif !important; /*Ändra font på hela sidan, använd "fallback" font om fontet inte funkar*/
-  font-size: 5.25vw; /*Vi använder vw för att view port skall kunna anpassa innehållet till olika skärmar*/
+  font-size: 4vw; /*Vi använder vw för att view port skall kunna anpassa innehållet till olika skärmar*/
   line-height: 1.625;
 
   /* Centrera texten */
