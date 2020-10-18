@@ -54,19 +54,26 @@ img { /*Stoppa användaren från att "dra" bilder ut ur hemsidan i en ny flik*/
 }
 
 
-/* Vi använder "kodnamner" ImgX (där X är ett element för allting på den första bilden */
+/* Vi använder "kodnamnet" ImgX (där X är ett element för allting på den första bilden */
 .ImgH { /* Header Texten som ligger över den första div;en */
   font-family: "SF Pro Display-Bold", "Helvetica Neue", "Helvetica", "Arial", sans serif !important; /*Ändra font på hela sidan, använd "fallback" font om fontet inte funkar*/
-  font-size: 4vw; /*Vi använder vw för att view port skall kunna anpassa innehållet till olika skärmar*/
   line-height: 1.625;
 
   /* Centrera texten */
   position: absolute;
   top: 40%;
+  font-size: 80px;
   color: white;
   text-align:center;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 649px) {
+	.ImgH {
+    	font-size: 40px;
+    }
 }
 
 
@@ -312,6 +319,21 @@ li:hover {
 
   scrollbar-color: rgba(0,0,0,0.5) transparent;
   scrollbar-width: thin;
+}
+
+/* Track */
+.transform-wrapper::-webkit-scrollbar-track {
+  background: trabsparent; 
+}
+ 
+/* Handle */
+.transform-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.5); 
+}
+
+/* Handle on hover */
+.transform-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.8); 
 }
 
 .container { scrollbar-shadow-color: rgba(0,0,0,0.5); }
