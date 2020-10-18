@@ -118,7 +118,7 @@ function detectIE() {
   return false;
 }
 
-/* Använd "typed.js" för att animera titel texten*/
+// Använd "typed.js" för att animera titel texten
 var typed = new Typed('.typed', {
   strings: ["Welcome to <br> London", "Welcome to <br> the best city ever", "Welcome to <br> a city full of life", "Welcome to <br> a city worth visiting", "Welcome to <br> a city with innovation", "Welcome to <br> a city for the riches", "Welcome to <br> London"],
   typeSpeed: 100,
