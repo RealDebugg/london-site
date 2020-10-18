@@ -70,6 +70,7 @@ img { /*Stoppa användaren från att "dra" bilder ut ur hemsidan i en ny flik*/
   width: 100%;
 }
 
+/* Anpassa texten beroende på fönster storleken */
 @media only screen and (min-width: 300px) and (max-width: 649px) {
 	.ImgH {
     	font-size: 40px;
@@ -319,6 +320,11 @@ li:hover {
 
   scrollbar-color: rgba(0,0,0,0.5) transparent;
   scrollbar-width: thin;
+}
+
+/* width */
+.transform-wrapper::-webkit-scrollbar {
+  width: 10px;
 }
 
 /* Track */

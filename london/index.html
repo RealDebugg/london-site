@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="sv">
+
+<!-- Viewport -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Skicka vidare webläsare som blockerar java -->
 <noscript><meta http-equiv="refresh" content="0; URL='noscript/noscript.html'"/></noscript>
 	<head>
+		<!-- Sidans titel -->
 		<title>London tourist</title>
+
+		<!-- Huvud still -->
 		<link rel="stylesheet" href="css/main.css">
+
+		<!-- Integrera "Google Material Icons" -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<!-- Integrera JQuery -->
 		<script src="//code.jquery.com/jquery.min.js"></script>
 
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+		<!-- Integrera bootstrap -->
 		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+		<!-- Google fonts, Montserrat -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+		
+		<!-- JQuery, annan version (backwards compatibility) -->
 		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+		<!-- integrera Typed.js via CDN, lättare laddning ifall användaren har laddat
+		detta tidigare. -->
 		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 	</head>
 	<body>
-		<div id="page-loaded">
-			<div id="bg-page" class="section">
-			<div class="section-center">
+		<!-- Sidan när laddad korrekt -->
+		<section id="page-loaded">
+			<!-- Popup för formulär, används bara en gång -->
+			<section id="bg-page" class="section">
+				<div class="section-center">
 				<div class="container" style="margin-right: 0 !important;">
 					<div>
 						<!-- Formulär för att gå med -->
 						<div class="col-md-4">
 							<div class="race-for-luck" id="da-fuk">
 								<a class="material-icons WinClose" onclick="closeWinner()">clear</a>
+								<!-- Formulär -->
 								<form id="race-form-lmao">
 									<div class="form-group">
 										<span class="form-label">Your Hotel</span>
@@ -91,34 +113,39 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			</div>
-			<div id="bg-popup" class="section" style="display:none;">
-			<div class="section-center">
-				<div class="container" style="margin-right: auto !important;">
-					<div>
-						<!-- Popup -->
-						<div class="col-md-4" id="popup-css">
-							<div class="race-for-luck lucky-popup" id="da-fuk">
-								<a class="material-icons PopClose" onclick="closePopup()">clear</a>
-								<h2 id="popup-title" style="color: #000;"></h2>
-								<p id="popup-desc" style="color: #000;"></p>
+				</div>
+			</section>
+
+			<!-- Popups för actions (interest list m.m.) -->
+			<section id="bg-popup" class="section" style="display:none;">
+				<div class="section-center">
+					<div class="container" style="margin-right: auto !important;">
+						<div>
+							<!-- Popup -->
+							<div class="col-md-4" id="popup-css">
+								<div class="race-for-luck lucky-popup" id="da-fuk">
+									<a class="material-icons PopClose" onclick="closePopup()">clear</a>
+									<h2 id="popup-title" style="color: #000;"></h2>
+									<p id="popup-desc" style="color: #000;"></p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
+
+			<!-- Header bar -->
+			<div class="header" id="myHeader">
+				<div class="hContent">
+					<a href="#" class="hText">My Header</a> 
+				</div>
+				<div class="div-Cont">
+					<div class="hDivider" id="myDivider"></div>
+				</div>
+				<div class="nav-header-bg"></div>
 			</div>
 
-			<div class="header" id="myHeader">
-			<div class="hContent">
-				<a href="#" class="hText">My Header</a> 
-			</div>
-			<div class="div-Cont">
-				<div class="hDivider" id="myDivider"></div>
-			</div>
-			<div class="nav-header-bg"></div>
-			</div>
+			<!-- Första content -->
 			<section class="content">
 				<img src="img/1.jpg" class="ImgTop"></img>
 				<h2 class="ImgH">
@@ -126,11 +153,18 @@
 				</h2>
 				<a id="imgArr" href="#imgArr" class="material-icons ImgArr">keyboard_arrow_down</a>
 			</section>
+
+			<!-- Main content section, håller allt interactiva innehåll -->
 			<section class="content2" id="content" style="height:100000px;">
 				<!-- Start Interest List -->
 				<h2 class="attr-h1">Top Attractions in London</h2> <br>
+
+				<!-- Scrollbar lista -->
 				<div class="transform-wrapper">
-				<ul>
+					<!-- "CallDOCInfo" eller "Call Document Info" används för att
+					öppna en popup med mer info (reference main.js), parameter 1 = titel,
+					parameter 2 = beskrivning -->
+					<ul>
 					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/warn-bro.jpg&quot;);" onclick="CallDOCInfo('Warner Bros. Studio Tour','Wizard')"></li>
 					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/lond-eye.jpg&quot;);" onclick="CallDOCInfo('London Eye','Wizard')"></li>
 					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/wind-castl.jpg&quot;);" onclick="CallDOCInfo('HI!3','Wizard')"></li>
@@ -141,16 +175,20 @@
 					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/wemb-stad.jpg&quot;);" onclick="CallDOCInfo('HI!8','Wizard')"></li>
 					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/west-abb.jpg&quot;);" onclick="CallDOCInfo('HI!9','Wizard')"></li>
 					<li class="hover-li" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/lnd-trans-mus.jpg&quot;);" onclick="CallDOCInfo('HI!10','Wizard')"></li>
-				</ul>
+					</ul>
 				</div>
 				<!-- End Interest List -->
 			</section>
-		</div>
-		<div id="browser-not-supported" style="display: none;">
+		</section>
+
+		<!-- Sidan när laddad inkorrekt -->
+		<section id="browser-not-supported" style="display: none;">
 			<img class="status-page-image" src="img/error_browser.gif">
 			<h1 class="not-supported-page-title">Oh snap! We don't support this version of your browser, <em>and neither should you!</em></h1>
 			<p class="not-supported-intro">You are visiting this page because we detected an unsupported browser. Your browser does not support security features that we require. We highly recommend that you update your browser.</p>
-		</div>
+		</section>
+
+		<!-- Skripter -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>

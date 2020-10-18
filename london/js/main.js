@@ -7,7 +7,7 @@ var tDiv = document.getElementById("myDivider");
 var sticky = header.offsetTop;
 
 function onScrollFunction() {
-  if (window.pageYOffset > sticky) {
+  if (window.pageYOffset > 0) {
     header.classList.add("header-bg-scroll");
     tDiv.classList.add("hDivider-scroll");
   } else {
