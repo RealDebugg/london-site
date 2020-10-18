@@ -67,17 +67,14 @@ $("#race-form-lmao").submit(function( event ) {
   ResetForm();
 });
 
-
-// ESC stänger vin resa menyn 
-document.onkeyup = function (data) {
-  if (data.which == 27) { // Escape key
-    $("#bg-page").fadeOut();
-    setTimeout(function(){ 
-      $("#i-got-ur-personal-info-mate").css("display", "none");
-      $("#race-form-lmao").css("display", "block"); 
-    }, 100);
-  }
-};
+// Öppna formulär
+function openFormWin() {
+  $(".win-bg").fadeOut();
+  $("#bg-page").fadeIn();
+  setTimeout(function(){
+    ResetForm()
+  }, 500)
+}
 
 // Ändra popup innehåll och öppna popupen, stänga formuläret om det är öppet
 function CallDOCInfo(titleInfo, stringInfo) {

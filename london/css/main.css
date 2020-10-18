@@ -38,7 +38,6 @@ body {
   height: 43px;
   position: -webkit-sticky; /* Fäst headern så att den följer med när du scrollar */
   position: sticky; /* Fäst headern så att den följer med när du scrollar */
-  align-items: center;
   top: 0;
   width: 100%;
   z-index:1003;
@@ -139,7 +138,7 @@ img { /*Stoppa användaren från att "dra" bilder ut ur hemsidan i en ny flik*/
   height: 1px;
   max-width: 1600px;
   transition: width .2s ease-in-out; /* Animera live ändringar till width;en*/
-  width: calc(100% - 80px); /* Anpassa element att vissas på samma sätt oberoenda på skärm storlek */
+  width: calc(100% - 80px); /* Anpassa element att vissas på samma sätt oberoende på skärm storlek */
   background-color: rgba(255,255,255,.1);
   margin: auto;
 }
@@ -185,11 +184,6 @@ img { /*Stoppa användaren från att "dra" bilder ut ur hemsidan i en ny flik*/
 }
 
 /* Header bakgrund, följer med och visas hela tiden*/
-
-.nav-header-bg {
-  z-index:1000;
-}
-
 .nav-header-bg::after {
   content: '';
   height: 100px;
@@ -329,7 +323,7 @@ li:hover {
 
 /* Track */
 .transform-wrapper::-webkit-scrollbar-track {
-  background: trabsparent; 
+  background: transparent; 
 }
  
 /* Handle */
@@ -599,58 +593,8 @@ svg {
   margin: 40px auto 0;
 }
 
-.path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 0;
-  &.circle {
-    -webkit-animation: dash .9s ease-in-out;
-    animation: dash .9s ease-in-out;
-  }
-  &.check {
-    stroke-dashoffset: -100;
-    -webkit-animation: dash-check .9s .35s ease-in-out forwards;
-    animation: dash-check .9s .35s ease-in-out forwards;
-  }
-}
-
 .thanks {
   display: none;
-}
-
-@-webkit-keyframes dash {
-  0% {
-    stroke-dashoffset: 1000;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 1000;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@-webkit-keyframes dash-check {
-  0% {
-    stroke-dashoffset: -100;
-  }
-  100% {
-    stroke-dashoffset: 900;
-  }
-}
-
-@keyframes dash-check {
-  0% {
-    stroke-dashoffset: -100;
-  }
-  100% {
-    stroke-dashoffset: 900;
-  }
 }
 
 a:active {
@@ -702,4 +646,38 @@ a:focus {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+
+.win-bg {
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1010;
+  width: 100%;
+  position: -webkit-fixed;
+  position: fixed;
+}
+
+.win-some-info {
+  padding: 12px 0;
+  margin-top: 0;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.win-some-info a {
+  color: #fff !important;
+}
+
+.win-some-info a:hover {
+  color: #fff !important;
+}
+
+.win-some-info a:active {
+  color: #fff !important;
+}
+
+.win-some-info a:focus {
+  color: #fff !important;
 }
