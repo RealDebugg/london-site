@@ -16,18 +16,6 @@ function onScrollFunction() {
   }
 }
 
-// Kopierad kod, aktiverar laddnings skärmen
-$('body').append('<div style="" id="loadingDiv"><div class="spinner"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div><div class="bar6"></div><div class="bar7"></div><div class="bar8"></div><div class="bar9"></div><div class="bar10"></div><div class="bar11"></div><div class="bar12"></div></div></div>');
-$(window).on('load', function(){
-  setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
-});
-function removeLoader(){
-    $( "#loadingDiv" ).fadeOut(500, function() {
-      // fadeOut complete. Remove the loading div
-      $( "#loadingDiv" ).remove(); //makes page more lightweight 
-  });  
-}
-
 // Stoppa användare i firefox från att dra bilder till en ny flik
 $(document).on("dragstart", function(e) {
      if (e.target.nodeName.toUpperCase() == "IMG") {
@@ -109,11 +97,3 @@ function detectIE() {
   // other browser
   return false;
 }
-
-// Använd "typed.js" för att animera titel texten
-var typed = new Typed('.typed', {
-  strings: ["Welcome to <br> London", "Welcome to <br> the best city ever", "Welcome to <br> a city full of life", "Welcome to <br> a city worth visiting", "Welcome to <br> a city with innovation", "Welcome to <br> a city for the riches", "Welcome to <br> London"],
-  typeSpeed: 100,
-  backSpeed: 70,
-  showCursor: true
-});
