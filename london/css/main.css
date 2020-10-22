@@ -34,8 +34,8 @@ body {
 .header { /* Headern */
   margin: auto;
   height: 43px;
-  position: -webkit-sticky; /* Fäst headern så att den följer med när du scrollar */
-  position: sticky; /* Fäst headern så att den följer med när du scrollar */
+  position: -webkit-fixed; /* Fäst headern så att den följer med när du scrollar */
+  position: fixed; /* Fäst headern så att den följer med när du scrollar */
   top: 0;
   width: 100%;
   z-index:1003;
@@ -60,8 +60,8 @@ body {
 
 /* Anpassa texten beroende på fönster storleken */
 @media only screen and (min-width: 900px) and (max-width: 649px) {
-	.ImgH {
-    font-size: 40px;
+  .ImgH {
+    font-size: 30px;
   }
   .attr-h1 {
     font-size: calc(23.04px + 4*(100vw - 400px)/500);
@@ -178,6 +178,14 @@ body {
   height: 100%;
   background: linear-gradient(to top, rgba(105,105,105,.4), rgba(0,0,0,0.4)33%,rgba(0,0,0,0)100%); /* Använd gradient för att skapa en sort shadow, får bilden att se mörkare ut */
   margin-bottom: 6px;
+  position: absolute;
+}
+
+.content2 {
+	top: 100%;
+	left: 0%;
+	right: 0%;
+	position: absolute;
 }
 
 /* Header bakgrund, följer med och visas hela tiden*/
@@ -215,6 +223,10 @@ li:hover {
   box-shadow: 0 10px 22px 0 rgba(80,182,210,0.5);
 }
 
+.page-loaded {
+	position: relative;
+}
+
 .transform-wrapper {
   white-space: nowrap;
   padding-top: 10px;
@@ -222,33 +234,8 @@ li:hover {
   overflow-x: scroll;
   width: 100%;
   min-height: 285px;
-
-  scrollbar-color: rgba(0,0,0,0.5) transparent;
-  scrollbar-width: thin;
   margin-bottom: 5rem;
 }
-
-/* width */
-.transform-wrapper::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-.transform-wrapper::-webkit-scrollbar-track {
-  background: transparent; 
-}
- 
-/* Handle */
-.transform-wrapper::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.5); 
-}
-
-/* Handle on hover */
-.transform-wrapper::-webkit-scrollbar-thumb:hover {
-  background: rgba(0,0,0,0.8); 
-}
-
-.container { scrollbar-shadow-color: rgba(0,0,0,0.5); }
 
 /*Hover animation*/
 .hover-li {
@@ -319,7 +306,7 @@ ul {
 .attr-h1 {
   padding-left: 40px;
   width: auto;
-  color: #363636;
+  color: #fff;
   font-weight: 600 !important;
 }
 
@@ -556,36 +543,27 @@ a:focus {
   margin-inline-end: 0px;
 }
 
-.win-bg {
-  background-color: rgba(0,0,0,0.5);
-  z-index: 1010;
-  width: 100%;
-  position: -webkit-fixed;
-  position: fixed;
+.win-open {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
-.win-some-info {
-  padding: 12px 0;
-  margin-top: 0;
-  font-size: 14px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.win-open a {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
-.win-some-info a {
-  color: #fff !important;
+.win-open a:hover {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
-.win-some-info a:hover {
-  color: #fff !important;
+.win-open a:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
-.win-some-info a:active {
-  color: #fff !important;
-}
-
-.win-some-info a:focus {
-  color: #fff !important;
+.win-open a:focus {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }

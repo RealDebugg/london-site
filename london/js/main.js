@@ -52,7 +52,6 @@ $("#race-form-lmao").submit(function( event ) {
 
 // Öppna formulär
 function openFormWin() {
-  $(".win-bg").fadeOut();
   $("#bg-page").fadeIn();
   setTimeout(function(){
     ResetForm()
