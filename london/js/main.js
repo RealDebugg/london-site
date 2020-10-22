@@ -25,12 +25,16 @@ $(document).on("dragstart", function(e) {
 
 // Återställ formuläret när informationen skickas
 function ResetForm() {
-  $("#hotel").val("");
-  $("#name").val("");
+  $("#fname").val("");
+  $("#lname").val("");
+  $("#email").val("");
+  $("#tel").val("");
+  $("#addr").val("");
+  $("#country").val("");
+  $("#state").val("");
+  $("#city").val("");
   $("#check-in").val("");
   $("#check-out").val("");
-  $("#adults").val("1");
-  $("#child").val("0");
 }
 
 function closeWinner() {
