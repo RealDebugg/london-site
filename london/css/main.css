@@ -34,7 +34,6 @@ body {
 .header { /* Headern */
   margin: auto;
   height: 43px;
-  position: -webkit-fixed; /* Fäst headern så att den följer med när du scrollar */
   position: fixed; /* Fäst headern så att den följer med när du scrollar */
   top: 0;
   width: 100%;
@@ -59,12 +58,13 @@ body {
 }
 
 /* Anpassa texten beroende på fönster storleken */
-@media only screen and (min-width: 900px) and (max-width: 649px) {
+@media only screen and (min-width: 300px) and (max-width: 649px) {
   .ImgH {
-    font-size: 70px !important;
+    font-size: 70px;
   }
   .attr-h1 {
     font-size: calc(23.04px + 4*(100vw - 400px)/500);
+    color: #363636 !important;
   }
 }
 
@@ -72,19 +72,6 @@ body {
   .attr-h1 {
     font-size: 40.96px;
   } 
-}
-
-
-.ImgArr {
-  font-size: 48px !important; /* important används för att överskrida material designs default */
-  text-decoration: none !important; /* Föremålet har en länk, tag bort under linjen */
-  color: #fff; /* Föremålet har en länk, ändra färgen till vit */
-
-  /* Centrera föremålet */
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .PopClose {
@@ -168,23 +155,11 @@ body {
   color: white !important;
 }
 
-.ImgArr:hover {
-  color: white !important;
-}
-
 .content {
   padding: 0px;
-  margin-top: -43px;
+  height: 100%;
   background: linear-gradient(to top, rgba(105,105,105,.4), rgba(0,0,0,0.4)33%,rgba(0,0,0,0)100%); /* Använd gradient för att skapa en sort shadow, får bilden att se mörkare ut */
   margin-bottom: 6px;
-  height: 100%;
-}
-
-.content2 {
-	top: 100%;
-	left: 0%;
-	right: 0%;
-	position: absolute;
 }
 
 /* Header bakgrund, följer med och visas hela tiden*/
@@ -220,10 +195,6 @@ li {
 
 li:hover {
   box-shadow: 0 10px 22px 0 rgba(80,182,210,0.5);
-}
-
-.page-loaded {
-	position: relative;
 }
 
 .transform-wrapper {
@@ -479,6 +450,17 @@ ul {
   opacity: 0.9;
 }
 
+.content {
+	position: absolute;
+}
+
+.content2 {
+	position: absolute;
+	top: 100%;
+	left: 0%;
+	right: 0%;
+}
+
 
 
 svg {
@@ -543,26 +525,26 @@ a:focus {
 }
 
 .win-open {
-  color: #ffffff !important;
-  text-decoration: none !important;
+  color: #fff !important;
+  text-decoration: none;
 }
 
 .win-open a {
-  color: #ffffff !important;
-  text-decoration: none !important;
+  color: #fff !important;
+  text-decoration: none;
 }
 
 .win-open a:hover {
-  color: #ffffff !important;
-  text-decoration: none !important;
+  color: #fff !important;
+  text-decoration: none;
 }
 
 .win-open a:active {
-  color: #ffffff !important;
-  text-decoration: none !important;
+  color: #fff !important;
+  text-decoration: none;
 }
 
 .win-open a:focus {
-  color: #ffffff !important;
-  text-decoration: none !important;
+  color: #fff !important;
+  text-decoration: none;
 }
