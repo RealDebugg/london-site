@@ -61,7 +61,7 @@ body {
 /* Anpassa texten beroende på fönster storleken */
 @media only screen and (min-width: 900px) and (max-width: 649px) {
   .ImgH {
-    font-size: 30px;
+    font-size: 70px !important;
   }
   .attr-h1 {
     font-size: calc(23.04px + 4*(100vw - 400px)/500);
@@ -175,10 +175,9 @@ body {
 .content {
   padding: 0px;
   margin-top: -43px;
-  height: 100%;
   background: linear-gradient(to top, rgba(105,105,105,.4), rgba(0,0,0,0.4)33%,rgba(0,0,0,0)100%); /* Använd gradient för att skapa en sort shadow, får bilden att se mörkare ut */
   margin-bottom: 6px;
-  position: absolute;
+  height: 100%;
 }
 
 .content2 {
