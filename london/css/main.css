@@ -23,6 +23,8 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  word-break: break-word;
 }
 
 fieldset {
@@ -562,30 +564,33 @@ a:focus {
 
 .li-incard {
 	display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    box-sizing: inherit !important;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: inherit !important;
 
-    position: absolute;
-    padding: 27px 18px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(180deg,transparent,rgba(0,0,0,.3) 50%,rgba(0,0,0,.7) 80%,rgba(0,0,0,.8));
+  border-radius: 10px;
 }
 
 .incard-text {
 	display: flex;
-    flex-direction: column;
-    line-height: 1em;
+  flex-direction: column;
+  line-height: 1em;
 }
 
 .incard-span {
 	text-transform: capitalize;
-    font-size: 25.92px;
-    font-weight: 600;
-    line-height: 1.2;
-    min-height: 2.4em;
-    color: #fff;
-    z-index: 1003;
+  font-size: 25.92px;
+  font-weight: 600;
+  line-height: 1.2;
+  min-height: 2.4em;
+  color: #fff;
+  padding: 27px 18px;
+  z-index: 1003;
 }
