@@ -63,7 +63,7 @@ function openFormWin() {
 }
 
 // Ändra popup innehåll och öppna popupen, stänga formuläret om det är öppet
-function CallDOCInfo(titleInfo, stringInfo) {
+function CallDOCInfo(titleInfo, stringInfo, img) {
   $("#bg-page").css("display", "none");
   $("#bg-popup").fadeIn();
   document.getElementById("popup-title").innerHTML = titleInfo;
