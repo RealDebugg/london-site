@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<!-- Skicka vidare webläsare som blockerar java -->
+<noscript><meta http-equiv="refresh" content="0; URL='noscript/noscript.html'"/></noscript>
+	<head>
+		<!-- Sidans titel -->
+		<title>Visit California</title>
+
+		<!-- Viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Huvud still -->
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/header.css">
+
+		<!-- Importera fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- Integrera bootstrap -->
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	</head>
+	<body>
+		<!-- Sidan när laddad korrekt -->
+		<section id="page-loaded">
+			<!-- Popup för formulär, används bara en gång -->
+			<section id="bg-page" class="section" style="display:none;">
+				<div class="section-center">
+				<div class="container" style="margin-right: auto !important;">
+					<div>
+						<!-- Formulär för att gå med -->
+						<div class="col-md-4">
+							<div class="race-for-luck" id="da-fuk">
+								<a class="material-icons WinClose" onclick="closeWinner()">clear</a>
+								<!-- Formulär -->
+								<form id="race-form-lmao">
+									<fieldset>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<span class="form-label">First Name*</span>
+													<input class="form-control name-control" placeholder="First Name" id="fname" type="text" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+													<span class="form-label">Last Name*</span>
+													<input class="form-control name-control" placeholder="Last Name" id="lname" type="text" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<span class="form-label">Email*</span>
+													<input class="form-control" placeholder="Email" id="email" type="email" required>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+													<span class="form-label">Telephone</span>
+													<input class="form-control" id="tel">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<span class="form-label">Address*</span>
+											<input class="form-control" id="addr" placeholder="Home Address" required>
+										</div>
+									</fieldset>
+									<fieldset>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<span class="form-label">Country*</span>
+													<input class="form-control name-control" placeholder="Country Name" id="country" type="text" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+													<span class="form-label">State/Region*</span>
+													<input class="form-control name-control" placeholder="State or Region" id="state" type="text" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<span class="form-label">City*</span>
+											<input class="form-control" placeholder="City" type="text" id="city" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
+										</div>
+									</fieldset>
+									<fieldset>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<span class="form-label">Check In</span>
+													<input class="form-control" id="check-in" type="date" required>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+													<span class="form-label">Check out</span>
+													<input class="form-control" id="check-out" type="date" required>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="form-btn" id="form-btn">
+										<button class="submit-btn" type="submit" id="submit" >Confirm</button>
+									</div>
+								</form>
+
+								<!-- SVG (Gömd Div, visas efter all info har submittats) -->
+								<div id="i-got-ur-personal-info-mate" class="thanks">
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+  										<circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+  										<polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+									</svg>
+									<h1 style="text-align: center; color:#000;">Thanks!</h1>
+									<p style="text-align: center; color:#000;">Your information has been processed and we'll get back to you once we've confirmed your spot!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</section>
+
+			<!-- Popups för actions (interest list m.m.) -->
+			<section id="bg-popup" class="section" style="display:none;">
+				<div class="section-center">
+					<div class="container" style="margin-right: auto !important;">
+						<div>
+							<!-- Popup -->
+							<div class="col-md-4" id="popup-css">
+								<div class="race-for-luck lucky-popup" id="da-fuk">
+									<a class="material-icons PopClose" onclick="closePopup()">clear</a>
+									<h2 id="popup-title" style="color: #000;"></h2>
+									<p id="popup-desc" style="color: #000; font-size: 20px;"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Header bar -->
+			<div class="header" id="myHeader">
+				<div class="hContent">
+					<a href="index.html" class="hText">Visit California</a> 
+					<ul class="header-ul">
+						<li class="header-li">
+							<a class="header-a header-a-selected">Stores in California</a>
+						</li>
+						<li class="header-li">
+							<a href="hotels.html" class="header-a">Best Hotels in Cali</a>
+						</li>
+						<li class="header-li">
+							<a class="header-a">Contact us</a>
+						</li>
+					</ul>
+					<a class="material-icons-outlined win-open" onclick="openFormWin()">notification_important</a>
+				</div>
+				<div class="div-Cont">
+					<div class="hDivider" id="myDivider"></div>
+				</div>
+				<div class="nav-header-bg"></div>
+			</div>
+
+			<!-- Första content -->
+			<section class="content">
+				<img src="img/1.jpg" loading="lazy" class="ImgTop"></img>
+				<h2 class="ImgH">
+					<span class="typed">Welcome to<br>California!</span>
+				</h2>
+			</section>
+		</section>
+
+		<!-- Sidan när laddad inkorrekt -->
+		<section id="browser-not-supported" style="display: none;">
+			<img class="status-page-image" src="img/error_browser.gif">
+			<h1 class="not-supported-page-title">Oh snap! We don't support this version of your browser, <em>and neither should you!</em></h1>
+			<p class="not-supported-intro">You are visiting this page because we detected an unsupported browser. Your browser does not support security features that we require. We highly recommend that you update your browser.</p>
+		</section>
+
+		<!-- Skripter -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html> 

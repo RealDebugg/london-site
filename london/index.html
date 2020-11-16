@@ -12,6 +12,7 @@
 
 		<!-- Huvud still -->
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/header.css">
 
 		<!-- Importera fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
@@ -31,13 +32,12 @@
 			<!-- Popup för formulär, används bara en gång -->
 			<section id="bg-page" class="section" style="display:none;">
 				<div class="section-center">
-				<div class="container" style="margin-right: 0 !important;">
+				<div class="container" style="margin-right: auto !important;">
 					<div>
 						<!-- Formulär för att gå med -->
 						<div class="col-md-4">
 							<div class="race-for-luck" id="da-fuk">
 								<a class="material-icons WinClose" onclick="closeWinner()">clear</a>
-								<!-- Formulär -->
 								<!-- Formulär -->
 								<form id="race-form-lmao">
 									<fieldset>
@@ -141,7 +141,7 @@
 								<div class="race-for-luck lucky-popup" id="da-fuk">
 									<a class="material-icons PopClose" onclick="closePopup()">clear</a>
 									<h2 id="popup-title" style="color: #000;"></h2>
-									<p id="popup-desc" style="color: #000;"></p>
+									<p id="popup-desc" style="color: #000; font-size: 20px;"></p>
 								</div>
 							</div>
 						</div>
@@ -152,6 +152,17 @@
 			<div class="header" id="myHeader">
 				<div class="hContent">
 					<a href="#" class="hText">Visit California</a> 
+					<ul class="header-ul">
+						<li class="header-li">
+							<a href="stores.html" class="header-a">Stores in California</a>
+						</li>
+						<li class="header-li">
+							<a href="hotels.html" class="header-a">Best Hotels in Cali</a>
+						</li>
+						<li class="header-li">
+							<a class="header-a">Contact us</a>
+						</li>
+					</ul>
 					<a class="material-icons-outlined win-open" onclick="openFormWin()">notification_important</a>
 				</div>
 				<div class="div-Cont">
@@ -177,7 +188,7 @@
 					<!-- "CallDOCInfo" eller "Call Document Info" används för att
 					öppna en popup med mer info (reference main.js), parameter 1 = titel,
 					parameter 2 = beskrivning -->
-					<ul>
+					<ul class="interest-ul">
 						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Staying informed and respecting others will be essential as the Golden State reopens','The COVID-19 pandemic led to shelter-in-place restrictions throughout the world, preventing travel and separating many of us from loved ones. As California begins to reopen and people once again move around the state, we\’re asking them to do so in a thoughtful, safe, and respectful manner.<br><br>A big part of that involves preparation. California\’s recovery is unfolding at different rates in different communities, and the advisories in place vary by county and region. If you are planning to venture out, please familiarize yourself with local guidelines and regulations in your destination.<br><br>We also ask that you read and follow the California Responsible Travel Code below, which is designed to ensure that the Golden State remains a beautiful and viable destination over the long haul.<br><b><h1>California Responsible Travel Code</h1></b><br><b>R</b>oam Responsibly. I will explore California thoughtfully and responsibly, maintaining the utmost respect for everyone and everything I encounter.<br><br><b>E</b>ducate Myself. I will do my research before traveling across the state, familiarizing myself with local regulations and community concerns, which may have changed over time. This is especially important in rural communities with limited healthcare resources.<br><br><b>S</b>afety First. I will follow public health directives from government officials, including physical distancing measures. I will take all necessary steps to minimize health risks to myself and others and stay home if I’m sick.<br><br><b>P</b>reserve California. I will protect and nurture the Golden State\’s pristine outdoor spaces and cultural icons by maintaining a light footprint at every turn and paying special attention to delicate ecosystems.<br><br><b>E</b>mbrace Community. I will support local businesses and do my part to ensure the long-term prosperity of the places I visit.<br><br><b>C</b>elebrate Culture. I will immerse myself in California\’s diverse local cultures and embrace the traditions and practices I encounter.<br><br><b>T</b>each Others. I will lead by example and share these practices with fellow travelers, acknowledging that we all share the responsibility to protect California.')">
 							<div class="li-incard">
 								<div class="incard-text">
