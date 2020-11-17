@@ -4,11 +4,13 @@
 <!-- Skicka vidare webläsare som blockerar java -->
 <noscript><meta http-equiv="refresh" content="0; URL='noscript/noscript.html'"/></noscript>
 	<head>
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
 		<!-- Sidans titel -->
 		<title>Visit California</title>
 
 		<!-- Viewport -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
 
 		<!-- Huvud still -->
 		<link rel="stylesheet" href="css/main.css">
@@ -152,6 +154,7 @@
 			<div class="header" id="myHeader">
 				<div class="hContent">
 					<a href="#" class="hText">Visit California</a> 
+
 					<ul class="header-ul">
 						<li class="header-li">
 							<a href="stores.html" class="header-a">Stores in California</a>
@@ -163,7 +166,10 @@
 							<a class="header-a">Contact us</a>
 						</li>
 					</ul>
-					<a class="material-icons-outlined win-open" onclick="openFormWin()">notification_important</a>
+					<div>
+						<a class="material-icons-outlined win-open" onclick="openFormWin()">notification_important</a>
+						<a class="material-icons-outlined win-open menu-open" onclick="" style="float: right; display: none;">menu</a>
+					</div>
 				</div>
 				<div class="div-Cont">
 					<div class="hDivider" id="myDivider"></div>

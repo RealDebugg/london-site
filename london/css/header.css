@@ -1,10 +1,12 @@
 ul.header-ul {
-    display: table;
+    display: flex;
     white-space: nowrap;
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
     margin-right: 130px;
+    justify-content: space-between;
+    width: 30%;
 
     /* left: 50%;
     transform: translate(-50%, -50%);
@@ -53,7 +55,27 @@ li.header-li {
 }
 
 @media only screen and (max-width: 825px) {
+    .nav-header-bg {
+        display: none !important;
+    }
+    .div-Cont {
+        display: none !important;
+    }
+    .header {
+        background: #000 !important;
+    }
+}
+
+@media only screen and (max-width:1265px) {
     ul.header-ul {
         display:none;
     }
+
+    a.menu-open {
+        display:block !important;
+    }
+}
+
+.menu-open {
+    margin-left: 10px;
 }

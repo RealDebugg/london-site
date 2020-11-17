@@ -66,7 +66,7 @@ fieldset {
 /* Anpassa texten beroende på fönster storleken */
 @media only screen and (min-width: 300px) and (max-width: 649px) {
   .ImgH {
-    font-size: 70px;
+    font-size: 55px;
   }
   .attr-h1 {
     font-size: calc(23.04px + 4*(100vw - 400px)/500);
@@ -549,27 +549,24 @@ a:focus {
 
 .win-open {
   color: #fff !important;
-  text-decoration: none;
+  opacity: .8;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  text-decoration: none !important;
 }
 
-.win-open a {
+.win-open:hover {
   color: #fff !important;
-  text-decoration: none;
-}
-
-.win-open a:hover {
-  color: #fff !important;
-  text-decoration: none;
+  opacity: 1;
 }
 
 .win-open a:active {
   color: #fff !important;
-  text-decoration: none;
+  opacity: 1;
 }
 
 .win-open a:focus {
   color: #fff !important;
-  text-decoration: none;
+  opacity: 1;
 }
 
 .li-incard {
@@ -602,5 +599,5 @@ a:focus {
   min-height: 2.4em;
   color: #fff;
   padding: 27px 18px;
-  z-index: 1003;
+  z-index: 1002;
 }
