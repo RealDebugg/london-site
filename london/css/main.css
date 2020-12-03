@@ -37,17 +37,6 @@ fieldset {
   text-align: center;
 }
 
-.header { /* Headern */
-  margin: auto;
-  height: 43px;
-  position: fixed; /* Fäst headern så att den följer med när du scrollar */
-  top: 0;
-  width: 100%;
-  z-index:1003;
-  transition: all .2s ease-in-out; /* Animera alla ändringar som ändras live*/
-}
-
-
 /* Vi använder "kodnamnet" ImgX (där X är ett element för allting på den första bilden */
 .ImgH { /* Header Texten som ligger över den första div;en */
   line-height: 1.625;
@@ -586,18 +575,18 @@ a:focus {
 }
 
 .incard-text {
-	display: flex;
+  display: flex;
   flex-direction: column;
   line-height: 1em;
 }
 
 .incard-span {
-	text-transform: capitalize;
+  text-transform: capitalize;
   font-size: 25.92px;
   font-weight: 600;
   line-height: 1.2;
   min-height: 2.4em;
   color: #fff;
   padding: 27px 18px;
-  z-index: 1002;
+  z-index: 1003;
 }

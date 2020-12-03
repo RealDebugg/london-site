@@ -1,3 +1,13 @@
+.header { /* Headern */
+  margin: auto;
+  height: 43px;
+  position: fixed; /* Fäst headern så att den följer med när du scrollar */
+  top: 0;
+  width: 100%;
+  z-index:1004;
+  transition: all .2s ease-in-out; /* Animera alla ändringar som ändras live*/
+}
+
 ul.header-ul {
     display: flex;
     white-space: nowrap;
