@@ -1,0 +1,85 @@
+@media only screen and (min-width: 300px) and (max-width: 649px) {
+    .race-for-luck {
+        overflow-y: scroll;
+      overflow-x: hidden;
+    }
+}
+
+.PopClose {
+    font-size: 20px !important;
+    text-decoration: none !important;
+    color: #000;
+    margin-left: 95%;
+    position: absolute;
+    top: 4%;
+    right: 2%;
+}
+
+.section {
+    position: relative;
+    height: 100vh;
+}
+
+.section .section-center {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#bg-popup {
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+    background-position: center;
+    z-index: 1009;
+    position: -webkit-fixed; /* Fäst popupen till skärmen */
+    position: fixed; /* Fäst popupen till skärmen */
+    top: 0;
+    width: 100%;
+}
+
+#popup-css {
+    width: 70% !important;
+    transform: translate(20%);
+    max-height: 70%;
+}
+
+#popup-title {
+    margin-bottom: 0px; 
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-top: 10px;
+    max-width: 710px;
+}
+
+.lucky-popup {
+    position: relative;
+    max-height: 70%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#popup-desc p {
+    font-size: 20px !important;
+}
+
+#bg-popup::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.race-for-luck {
+    background-color: #fff;
+    padding: 10px 10px;
+    -webkit-box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    min-height: 532px;
+    max-height: 690px;
+}
