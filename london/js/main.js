@@ -2,9 +2,7 @@
 window.onscroll = function() {onScrollFunction()};
 
 var header = document.getElementById("myHeader");
-var background = document.getElementById("hBG");
 var tDiv = document.getElementById("myDivider");
-var sticky = header.offsetTop;
 
 function onScrollFunction() {
   if (window.pageYOffset > 0) {

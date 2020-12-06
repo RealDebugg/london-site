@@ -15,6 +15,9 @@
 		<!-- Huvud still -->
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/popup.css">
+		<link rel="stylesheet" href="css/interests.css">
+		<link rel="stylesheet" href="css/no-support.css">
 
 		<!-- Importera fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
@@ -31,108 +34,6 @@
 	<body>
 		<!-- Sidan när laddad korrekt -->
 		<section id="page-loaded">
-			<!-- Popup för formulär, används bara en gång -->
-			<section id="bg-page" class="section" style="display:none;">
-				<div class="section-center">
-				<div class="container" style="margin-right: auto !important;">
-					<div>
-						<!-- Formulär för att gå med -->
-						<div class="col-md-4">
-							<div class="race-for-luck" id="da-fuk">
-								<a class="material-icons WinClose" onclick="closeWinner()">clear</a>
-								<!-- Formulär -->
-								<form id="race-form-lmao">
-									<fieldset>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="form-group">
-													<span class="form-label">First Name*</span>
-													<input class="form-control name-control" placeholder="First Name" id="fname" type="text" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="form-group">
-													<span class="form-label">Last Name*</span>
-													<input class="form-control name-control" placeholder="Last Name" id="lname" type="text" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="form-group">
-													<span class="form-label">Email*</span>
-													<input class="form-control" placeholder="Email" id="email" type="email" required>
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="form-group">
-													<span class="form-label">Telephone</span>
-													<input class="form-control" id="tel">
-												</div>
-											</div>
-										</div>
-										<div class="form-group">
-											<span class="form-label">Address*</span>
-											<input class="form-control" id="addr" placeholder="Home Address" required>
-										</div>
-									</fieldset>
-									<fieldset>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="form-group">
-													<span class="form-label">Country*</span>
-													<input class="form-control name-control" placeholder="Country Name" id="country" type="text" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="form-group">
-													<span class="form-label">State/Region*</span>
-													<input class="form-control name-control" placeholder="State or Region" id="state" type="text" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
-												</div>
-											</div>
-										</div>
-										<div class="form-group">
-											<span class="form-label">City*</span>
-											<input class="form-control" placeholder="City" type="text" id="city" maxlength="25" pattern="[üåäöÅÄÖa-zA-Z-]{2,}" required>
-										</div>
-									</fieldset>
-									<fieldset>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="form-group">
-													<span class="form-label">Check In</span>
-													<input class="form-control" id="check-in" type="date" required>
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="form-group">
-													<span class="form-label">Check out</span>
-													<input class="form-control" id="check-out" type="date" required>
-												</div>
-											</div>
-										</div>
-									</fieldset>
-									<div class="form-btn" id="form-btn">
-										<button class="submit-btn" type="submit" id="submit" >Confirm</button>
-									</div>
-								</form>
-
-								<!-- SVG (Gömd Div, visas efter all info har submittats) -->
-								<div id="i-got-ur-personal-info-mate" class="thanks">
-									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-  										<circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
-  										<polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
-									</svg>
-									<h1 style="text-align: center; color:#000;">Thanks!</h1>
-									<p style="text-align: center; color:#000;">Your information has been processed and we'll get back to you once we've confirmed your spot!</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				</div>
-			</section>
-
 			<!-- Popups för actions (interest list m.m.) -->
 			<section id="bg-popup" class="section" style="display:none;">
 				<div class="section-center">
@@ -160,10 +61,10 @@
 							<a href="stores.html" class="header-a">Stores in California</a>
 						</li>
 						<li class="header-li">
-							<a href="hotels.html" class="header-a">Best Hotels in Cali</a>
+							<a class="header-spacer">|</a>
 						</li>
 						<li class="header-li">
-							<a class="header-a">Contact us</a>
+							<a href="hotels.html" class="header-a">Best Hotels in Cali</a>
 						</li>
 					</ul>
 					<div>
@@ -186,10 +87,9 @@
 			</section>
 
 			<!-- Main content section, håller allt interactiva innehåll -->
-			<section class="content2" id="content" style="height:100000px;">
+			<section class="content2" id="content">
 				<h3 class="attr-h1">Trip Inspiration</h3> <br>
-
-					<!-- Scrollbar lista -->
+				<!-- Scrollbar lista -->
 				<div class="transform-wrapper">
 					<!-- "CallDOCInfo" eller "Call Document Info" används för att
 					öppna en popup med mer info (reference main.js), parameter 1 = titel,
@@ -262,6 +162,402 @@
 							<div class="li-incard">
 								<div class="incard-text">
 									<span class="incard-span">23 Fall 2020 Events<br>in California</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<br>
+				<h3 class="attr-h1" style="color:#282828">Dummy Content</h3> <br>
+				<!-- Scrollbar lista -->
+				<div class="transform-wrapper">
+					<!-- "CallDOCInfo" eller "Call Document Info" används för att
+					öppna en popup med mer info (reference main.js), parameter 1 = titel,
+					parameter 2 = beskrivning -->
+					<ul class="interest-ul">
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<h3 class="attr-h1" style="color:#282828">Dummy Content</h3> <br>
+				<!-- Scrollbar lista -->
+				<div class="transform-wrapper">
+					<!-- "CallDOCInfo" eller "Call Document Info" används för att
+					öppna en popup med mer info (reference main.js), parameter 1 = titel,
+					parameter 2 = beskrivning -->
+					<ul class="interest-ul">
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<h3 class="attr-h1" style="color:#282828">Dummy Content</h3> <br>
+				<!-- Scrollbar lista -->
+				<div class="transform-wrapper">
+					<!-- "CallDOCInfo" eller "Call Document Info" används för att
+					öppna en popup med mer info (reference main.js), parameter 1 = titel,
+					parameter 2 = beskrivning -->
+					<ul class="interest-ul">
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<h3 class="attr-h1" style="color:#282828">Dummy Content</h3> <br>
+				<!-- Scrollbar lista -->
+				<div class="transform-wrapper">
+					<!-- "CallDOCInfo" eller "Call Document Info" används för att
+					öppna en popup med mer info (reference main.js), parameter 1 = titel,
+					parameter 2 = beskrivning -->
+					<ul class="interest-ul">
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<h3 class="attr-h1" style="color:#282828">Dummy Content</h3> <br>
+				<!-- Scrollbar lista -->
+				<div class="transform-wrapper">
+					<!-- "CallDOCInfo" eller "Call Document Info" används för att
+					öppna en popup med mer info (reference main.js), parameter 1 = titel,
+					parameter 2 = beskrivning -->
+					<ul class="interest-ul">
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
+								</div>
+							</div>
+						</li>
+						<li class="hover-li" loading="lazy" style="background-color: rgb(21, 18, 15); background-image: url(&quot;img/1.jpg&quot;);" onclick="CallDOCInfo('Dummy Content', 'Dummy Content')">
+							<div class="li-incard">
+								<div class="incard-text">
+									<span class="incard-span">Dummy Content</span>
 								</div>
 							</div>
 						</li>

@@ -17,13 +17,32 @@ ul.header-ul {
     margin-right: 130px;
     justify-content: space-between;
     width: 30%;
-
-    /* left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%; */
 }
 
 a.header-a {
+    color: rgba(255,255,255,.7)
+}
+
+a.header-spacer {
+    color: rgba(255,255,255,.7)
+}
+
+a.header-spacer:link {
+    color: rgba(255,255,255,.7)
+}
+  
+  /* visited link */
+a.header-spacer:visited {
+    color: rgba(255,255,255,.7)
+}
+  
+  /* mouse over link */
+a.header-spacer:hover {
+    color: rgba(255,255,255,.7)
+}
+  
+  /* selected link */
+a.header-spacer:active {
     color: rgba(255,255,255,.7)
 }
 
@@ -60,6 +79,8 @@ a.header-a:active {
 
 li.header-li {
     background-size: cover;
+    text-align: center;
+    min-width: 150px;
     display: inline-block;
     position: relative;
 }
@@ -88,4 +109,98 @@ li.header-li {
 
 .menu-open {
     margin-left: 10px;
+}
+
+.hDivider-scroll { /* Ändra widthen under headern vid scroll nedåt, classen ändras vi JS */
+    width: 100% !important;
+    max-width: none !important;
+}
+  
+.hText { /* Texten som visas i headern */
+    font-size: 21px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-decoration: none !important; /* Texten har en länk, ta bort underlinjen etc. */
+    color: #fff; /* Texten har en länk, ändra färgen till vit */
+    line-height: 1.14286;
+    font-weight: 600;
+    letter-spacing: .011em;
+    opacity: .8;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+  
+.hText:hover {
+    color: white !important;
+    opacity: 1;
+}
+
+.header-bg-scroll { /* Bakgrunden och stilen av headern ändras via JS */
+    background-color: rgba(0,0,0,.3);
+    backdrop-filter: saturate(50%) blur(15px);
+}
+  
+.hContent { /* "wrapper" för header */
+    position: relative;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1680px;
+    padding: 0 40px;
+    z-index:1002; /* z-index används för att anpassa föremålets lager, om den ska ligga under eller över andra föremål */
+}
+
+.win-open {
+    color: #fff !important;
+    opacity: .8;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    text-decoration: none !important;
+}
+  
+.win-open:hover {
+    color: #fff !important;
+    opacity: 1;
+}
+  
+.win-open a:active {
+    color: #fff !important;
+    opacity: 1;
+}
+  
+.win-open a:focus {
+    color: #fff !important;
+    opacity: 1;
+}
+
+/* Header bakgrund, följer med och visas hela tiden*/
+.nav-header-bg::after {
+    content: '';
+    height: 100px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom,rgba(0,0,0,.4) 0,rgba(0,0,0,.4) 33%,rgba(0,0,0,0) 100%); /* Avnänd gradient för att skapa en sorts shadow */
+}
+
+.div-Cont { /* "wrapper" för linjen under header, enda sättet jag lyckades fixa den position att ligga rätt */
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    z-index:1001;
+  
+}
+  
+.hDivider { /* En linje under headern, små detaljer */
+    /* Centrera föremålen */
+    justify-content: space-between;
+    align-items: center;
+    height: 1px;
+    max-width: 1600px;
+    transition: width .2s ease-in-out; /* Animera live ändringar till width;en*/
+    width: calc(100% - 80px); /* Anpassa element att vissas på samma sätt oberoende på skärm storlek */
+    background-color: rgba(255,255,255,.1);
+    margin: auto;
 }
