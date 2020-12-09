@@ -16,9 +16,9 @@ function onScrollFunction() {
 
 // Stoppa användare i firefox från att dra bilder till en ny flik
 $(document).on("dragstart", function(e) {
-     if (e.target.nodeName.toUpperCase() == "IMG") {
-         return false;
-     }
+  if (e.target.nodeName.toUpperCase() == "IMG") {
+    return false;
+  }
 });
 
 // Återställ formuläret när informationen skickas
@@ -33,15 +33,6 @@ function ResetForm() {
   $("#city").val("");
   $("#check-in").val("");
   $("#check-out").val("");
-}
-
-function closeWinner() {
-  ResetForm()
-  $("#bg-page").fadeOut();
-    setTimeout(function(){ 
-      $("#i-got-ur-personal-info-mate").css("display", "none");
-      $("#race-form-lmao").css("display", "block"); 
-    }, 100);
 }
 
 // När du skickar formuläret, ändra layout
