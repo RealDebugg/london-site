@@ -26,3 +26,26 @@
       top: 65% !important;
     }
 }
+
+h3.shopping-introduction {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.styled-hr {
+    width: 65%;
+}
+
+.styled-h1 {
+    width: 57% !important;
+    text-align: center;
+    font-weight: 600;
+}
+
+.styled-h2 {
+    width: 65% !important;
+    text-align: center;
+    font-weight: 600;
+}
